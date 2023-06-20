@@ -2,6 +2,44 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
+const skills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "red",
+  },
+  {
+    skill: "Software Testing",
+    level: "advanced",
+    color: "grey",
+  },
+  {
+    skill: "Geomatics Engineering",
+    level: "advanced",
+    color: "green",
+  },
+  {
+    skill: "React",
+    level: "intermediate",
+    color: "yellow",
+  },
+  {
+    skill: "Data Science",
+    level: "intermediate",
+    color: "pink",
+  },
+  {
+    skill: "Git and Github",
+    level: "intermediate",
+    color: "brown",
+  },
+  {
+    skill: "GNSS",
+    level: "advanced",
+    color: "cyan",
+  },
+];
+
 function App() {
   return (
     <div className="card">
@@ -38,10 +76,15 @@ function Intro() {
   );
 }
 
-function Skill(props) {
+function Skill({ text, color, level }) {
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.text}</span>
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{text}</span>
+      <span>
+        {level === "beginner" && "👶"}
+        {level === "intermediate" && "👍"}
+        {level === "advanced" && "💪"}
+      </span>
     </div>
   );
 }
@@ -49,10 +92,14 @@ function Skill(props) {
 function SkillList() {
   return (
     <div className="skill-list">
-      <Skill text="HTML+CSS 💪" color="red" />
+      {skills.map((skill) => (
+        <Skill text={skill.skill} color={skill.color} level={skill.level} />
+      ))}
+
+      {/* <Skill text="HTML+CSS 💪" color="red" />
       <Skill text="Software Testing 💪" color="blue" />
       <Skill text="Geomatics Engineering 💪" color="green" />
-      <Skill text="React 💪" color="yellow" />
+      <Skill text="React 💪" color="yellow" /> */}
     </div>
   );
 }

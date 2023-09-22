@@ -24,6 +24,11 @@ const skills = [
     color: "yellow",
   },
   {
+    skill: "NextJS",
+    level: "beginner",
+    color: "orange",
+  },
+  {
     skill: "Data Science",
     level: "intermediate",
     color: "pink",
@@ -37,6 +42,21 @@ const skills = [
     skill: "GNSS",
     level: "advanced",
     color: "cyan",
+  },
+  {
+    skill: "Full Stack",
+    level: "intermediate",
+    color: "silver",
+  },
+  {
+    skill: "Cloud Computing",
+    level: "beginner",
+    color: "salmon",
+  },
+  {
+    skill: "mMBA",
+    level: "beginner",
+    color: "white",
   },
 ];
 

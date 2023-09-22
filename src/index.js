@@ -93,13 +93,13 @@ function SkillList() {
   return (
     <div className="skill-list">
       {skills.map((skill) => (
-        <Skill text={skill.skill} color={skill.color} level={skill.level} />
+        <Skill
+          key={skill.skill}
+          text={skill.skill}
+          color={skill.color}
+          level={skill.level}
+        />
       ))}
-
-      {/* <Skill text="HTML+CSS 💪" color="red" />
-      <Skill text="Software Testing 💪" color="blue" />
-      <Skill text="Geomatics Engineering 💪" color="green" />
-      <Skill text="React 💪" color="yellow" /> */}
     </div>
   );
 }

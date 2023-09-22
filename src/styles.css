@@ -16,7 +16,13 @@ h1 {
 }
 
 .card {
-  width: 450px;
+  @media (min-width: 500px) {
+    width: 450px;
+  }
+  @media (max-width: 500px) {
+    width: 300px;
+  }
+
   margin: 40px;
   border: 4px solid #222;
 }
